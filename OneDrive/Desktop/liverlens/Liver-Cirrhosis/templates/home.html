@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiverLens</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('{{ url_for("static", filename="images/liverlens_bg.jpeg") }}');
+      background-size: cover; /* Make sure the background image covers the entire viewport */
+      background-position: center; /* Center the image */
+      background-attachment: fixed; /* Fix the background image in place */
+      background-color: #99c7f8;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end; /* Align content to the right */
+      align-items: center;
+    }
+    .button-container {
+      text-align: right; /* Align buttons to the right */
+      margin-right: 20px; /* Add margin to the right of the buttons */
+    }
+    .btn-primary, .btn-secondary {
+      margin: 10px; /* Add margin around buttons */
+      font-size: 1.2rem; /* Adjust font size */
+      padding: 15px 25px; /* Adjust padding */
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <form action="/upload">
+      <button type="submit" class="btn btn-primary btn-lg">Upload Files</button>
+    </form>
+    <form action="/form">
+      <button type="submit" class="btn btn-secondary btn-lg">Enter Data Manually</button>
+    </form>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
